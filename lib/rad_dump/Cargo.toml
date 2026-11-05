@@ -1,0 +1,12 @@
+[package]
+name = "rad_dump"
+version = "0.1.0"
+edition = "2021"
+description = "Step 13 RAD readers: per-molecule dump of a collated Flex RAD, per-read dump of a map RAD"
+
+[dependencies]
+libradicl = "=0.21.0"   # the libradicl alevin-fry 0.18.3 (edfd1aa) is built on; reads RAD v2 and the lz4 chunk codec
+anyhow = "1"
+
+[profile.release]
+opt-level = 3

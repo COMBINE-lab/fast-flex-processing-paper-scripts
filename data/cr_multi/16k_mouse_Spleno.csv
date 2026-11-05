@@ -1,0 +1,16 @@
+# Cell Ranger multi template for 16k_mouse_Spleno (from cr_multi_16k_mouse_Spleno_gexonly.csv). steps/05b_timing_cyto_cellranger.sh writes the run CSV from it:
+# reference -> $SCR/refs/cr_ref/<name>, probe-set -> the step-02 staged probe CSV, fastqs -> @STAGED@ = the step-02 staged dir of that fastq_id.
+[gene-expression]
+reference,refdata-gex-GRCm39-2024-A
+probe-set,Chromium_Mouse_Transcriptome_Probe_Set_v2.0.0_GRCm39-2024-A.csv
+create-bam,false
+
+[libraries]
+fastq_id,fastqs,feature_types
+16k_mouse_Splenocytes_TotalseqC_4plex_gex,@STAGED@,Gene Expression
+[samples]
+sample_id,probe_barcode_ids,description
+Splenocyte_TotalSeqC_C-E01,C-E01,Mouse splenocytes labelled with cell surface antibodies using TotalSeqC Mouse Universal Cocktail v1.0_rep1
+Splenocyte_TotalSeqC_C-F01,C-F01,Mouse splenocytes labelled with cell surface antibodies using TotalSeqC Mouse Universal Cocktail v1.0_rep2
+Splenocyte_TotalSeqC_C-G01,C-G01,Mouse splenocytes labelled with cell surface antibodies using TotalSeqC Mouse Universal Cocktail v1.0_rep3
+Splenocyte_TotalSeqC_C-H01,C-H01,Mouse splenocytes labelled with cell surface antibodies using TotalSeqC Mouse Universal Cocktail v1.0_rep4

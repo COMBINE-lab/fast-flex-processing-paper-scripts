@@ -1,0 +1,28 @@
+# Cell Ranger multi template for 320k_GEMX (from cr_multi_320k_GEMX_gexonly.csv). steps/05b_timing_cyto_cellranger.sh writes the run CSV from it:
+# reference -> $SCR/refs/cr_ref/<name>, probe-set -> the step-02 staged probe CSV, fastqs -> @STAGED@ = the step-02 staged dir of that fastq_id.
+[gene-expression]
+create-bam,false
+reference,refdata-gex-GRCh38-2024-A
+probe-set,Chromium_Human_Transcriptome_Probe_Set_v1.1.0_GRCh38-2024-A.csv
+
+[libraries]
+fastq_id,fastqs,lanes,feature_types
+Sub_Pool_16-plex_GEM-X_FLEX,@STAGED@,any,Gene Expression
+[samples]
+sample_id,probe_barcode_ids,description
+PBMC_BC001,BC001,320k GEM-X 16-plex human PBMC probe barcode BC001
+PBMC_BC002,BC002,320k GEM-X 16-plex human PBMC probe barcode BC002
+PBMC_BC003,BC003,320k GEM-X 16-plex human PBMC probe barcode BC003
+PBMC_BC004,BC004,320k GEM-X 16-plex human PBMC probe barcode BC004
+PBMC_BC005,BC005,320k GEM-X 16-plex human PBMC probe barcode BC005
+PBMC_BC006,BC006,320k GEM-X 16-plex human PBMC probe barcode BC006
+PBMC_BC007,BC007,320k GEM-X 16-plex human PBMC probe barcode BC007
+PBMC_BC008,BC008,320k GEM-X 16-plex human PBMC probe barcode BC008
+PBMC_BC009,BC009,320k GEM-X 16-plex human PBMC probe barcode BC009
+PBMC_BC010,BC010,320k GEM-X 16-plex human PBMC probe barcode BC010
+PBMC_BC011,BC011,320k GEM-X 16-plex human PBMC probe barcode BC011
+PBMC_BC012,BC012,320k GEM-X 16-plex human PBMC probe barcode BC012
+PBMC_BC013,BC013,320k GEM-X 16-plex human PBMC probe barcode BC013
+PBMC_BC014,BC014,320k GEM-X 16-plex human PBMC probe barcode BC014
+PBMC_BC015,BC015,320k GEM-X 16-plex human PBMC probe barcode BC015
+PBMC_BC016,BC016,320k GEM-X 16-plex human PBMC probe barcode BC016

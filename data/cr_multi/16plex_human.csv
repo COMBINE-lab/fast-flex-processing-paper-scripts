@@ -1,0 +1,28 @@
+# Cell Ranger multi template for 16plex_human (from cr_multi_16plex_human_gexonly.csv). steps/05b_timing_cyto_cellranger.sh writes the run CSV from it:
+# reference -> $SCR/refs/cr_ref/<name>, probe-set -> the step-02 staged probe CSV, fastqs -> @STAGED@ = the step-02 staged dir of that fastq_id.
+[gene-expression]
+create-bam,false
+reference,refdata-gex-GRCh38-2024-A
+probe-set,Chromium_Human_Transcriptome_Probe_Set_v1.1.0_GRCh38-2024-A.csv
+
+[libraries]
+fastq_id,fastqs,lanes,feature_types
+16plex_human_PBMC_TotalSeqC_gex,@STAGED@,any,Gene Expression
+[samples]
+sample_id,probe_barcode_ids,description
+PBMC_01_BC1_AB1,BC001,human PBMCs stained with TotalSeqC Human Universal Cocktail_rep1
+PBMC_02_BC2_AB2,BC002,human PBMCs stained with TotalSeqC Human Universal Cocktail_rep2
+PBMC_03_BC3_AB3,BC003,human PBMCs stained with TotalSeqC Human Universal Cocktail_rep3
+PBMC_04_BC4_AB4,BC004,human PBMCs stained with TotalSeqC Human Universal Cocktail_rep4
+PBMC_05_BC5_AB5,BC005,human PBMCs stained with TotalSeqC Human Universal Cocktail_rep5
+PBMC_06_BC6_AB6,BC006,human PBMCs stained with TotalSeqC Human Universal Cocktail_rep6
+PBMC_07_BC7_AB7,BC007,human PBMCs stained with TotalSeqC Human Universal Cocktail_rep7
+PBMC_08_BC8_AB8,BC008,human PBMCs stained with TotalSeqC Human Universal Cocktail_rep8
+PBMC_09_BC9_AB9,BC009,human PBMCs stained with TotalSeqC Human Universal Cocktail_rep9
+PBMC_10_BC10_AB10,BC010,human PBMCs stained with TotalSeqC Human Universal Cocktail_rep10
+PBMC_11_BC11_AB11,BC011,human PBMCs stained with TotalSeqC Human Universal Cocktail_rep11
+PBMC_12_BC12_AB12,BC012,human PBMCs stained with TotalSeqC Human Universal Cocktail_rep12
+PBMC_13_BC13_AB13,BC013,human PBMCs stained with TotalSeqC Human Universal Cocktail_rep13
+PBMC_14_BC14_AB14,BC014,human PBMCs stained with TotalSeqC Human Universal Cocktail_rep14
+PBMC_15_BC15_AB15,BC015,human PBMCs stained with TotalSeqC Human Universal Cocktail_rep15
+PBMC_16_BC16_AB16,BC016,human PBMCs stained with TotalSeqC Human Universal Cocktail_rep16

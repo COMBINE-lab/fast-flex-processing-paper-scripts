@@ -1,0 +1,16 @@
+# Cell Ranger multi template for 40k_DTC (from cr_multi_40k_DTC_gexonly.csv). steps/05b_timing_cyto_cellranger.sh writes the run CSV from it:
+# reference -> $SCR/refs/cr_ref/<name>, probe-set -> the step-02 staged probe CSV, fastqs -> @STAGED@ = the step-02 staged dir of that fastq_id.
+[gene-expression]
+create-bam,false
+reference,refdata-gex-GRCh38-2024-A
+probe-set,Chromium_Human_Transcriptome_Probe_Set_v1.1.0_GRCh38-2024-A.csv
+
+[libraries]
+fastq_id,fastqs,lanes,feature_types
+4plex_DTC_kidney_lung_breast_TotalSeqC_gex,@STAGED@,any,Gene Expression
+[samples]
+sample_id,probe_barcode_ids,description
+Kidney_Cancer1_BC1_AB1,BC001,Kidney_DTC stained with TotalSeqC antibodies_rep1
+Kidney_Cancer2_BC2_AB2,BC002,Kidney_DTC stained with TotalSeqC antibodies_rep2
+Breast_Cancer_BC3_AB3,BC003,Breast_DTC stained with TotalSeqC antibodies
+Lung_Cancer_BC4_AB4,BC004,NSCLC_DTC stained with TotalSeqC antibodies

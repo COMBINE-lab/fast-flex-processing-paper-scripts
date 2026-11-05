@@ -1,0 +1,6 @@
+dataset	url
+16plex_human	https://www.10xgenomics.com/datasets/128k-human-pbmcs-stained-with-totalseqc-human-universal-cocktail
+320k_GEMX	https://www.10xgenomics.com/datasets/320k_Human_PBMCs_Sub_Pool_16-plex_GEM-X_FLEX
+40k_DTC	https://www.10xgenomics.com/datasets/40k-mixture-of-dissociated-tumor-cells-from-3-donors-stained-with-totalseqc-antibodies
+Flexv2_16k_Human	https://www.10xgenomics.com/datasets/Flexv2_16k_Human_PBMCs_TotalseqC_4plex
+16k_mouse_Spleno	https://www.10xgenomics.com/datasets/Flexv2_16k_mouse_Splenocytes_TotalseqC_4plex

@@ -1,0 +1,16 @@
+# Cell Ranger multi template for Flexv2_16k_Human (from cr_multi_Flexv2_16k_Human_gexonly.csv). steps/05b_timing_cyto_cellranger.sh writes the run CSV from it:
+# reference -> $SCR/refs/cr_ref/<name>, probe-set -> the step-02 staged probe CSV, fastqs -> @STAGED@ = the step-02 staged dir of that fastq_id.
+[gene-expression]
+reference,refdata-gex-GRCh38-2024-A
+probe-set,Chromium_Human_Transcriptome_Probe_Set_v2.0.0_GRCh38-2024-A.csv
+create-bam,false
+
+[libraries]
+fastq_id,fastqs,feature_types
+16k_Human_PBMCs_TotalseqC_4plex_gex,@STAGED@,Gene Expression
+[samples]
+sample_id,probe_barcode_ids,description
+PBMC_TotalSeqC_C-A01,C-A01,Human PBMCs labelled with cell surface antibodies usingTotalSeqC Human Universal Cocktail v2.0_rep1
+PBMC_TotalSeqC_C-B01,C-B01,Human PBMCs labelled with cell surface antibodies usingTotalSeqC Human Universal Cocktail v2.0_rep2
+PBMC_TotalSeqC_C-C01,C-C01,Human PBMCs labelled with cell surface antibodies usingTotalSeqC Human Universal Cocktail v2.0_rep3
+PBMC_TotalSeqC_C-D01,C-D01,Human PBMCs labelled with cell surface antibodies usingTotalSeqC Human Universal Cocktail v2.0_rep4
